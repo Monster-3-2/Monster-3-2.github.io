@@ -182,7 +182,7 @@ const FeaturedProjectsSection = () => {
   );
 };
 
-const PROJECT_CARD_STICKY_TOPS = [60, 140, 180];
+const PROJECT_CARD_STICKY_TOPS = [60, 140, 0];
 
 const ProjectCard = ({ project, index, total }) => {
   const containerRef = useRef(null);
