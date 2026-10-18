@@ -182,8 +182,6 @@ const FeaturedProjectsSection = () => {
   );
 };
 
-const PROJECT_CARD_STICKY_TOPS = [60, 140, 0];
-
 const ProjectCard = ({ project, index, total }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -198,9 +196,8 @@ const ProjectCard = ({ project, index, total }) => {
       ref={containerRef}
       style={{
         scale,
-        transformOrigin: 'top center',
         position: 'sticky',
-        top: `${PROJECT_CARD_STICKY_TOPS[index] ?? PROJECT_CARD_STICKY_TOPS[PROJECT_CARD_STICKY_TOPS.length - 1]}px`,
+        top: `${60 + index * 80}px`,
         zIndex: index + 1,
         marginBottom: index < total - 1 ? '-80px' : '0px'
       }}
