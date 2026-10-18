@@ -186,7 +186,7 @@ const ProjectCard = ({ project, index, total }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 70%', 'end 30%']
+    offset: ['start 70%', 'end 20%']
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
