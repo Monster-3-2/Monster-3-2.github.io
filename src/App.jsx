@@ -173,7 +173,7 @@ const FeaturedProjectsSection = () => {
         </h2>
       </FadeIn>
 
-      <div className="max-w-6xl mx-auto relative" style={{ paddingBottom: 'calc(100vh + 200px)' }}>
+      <div className="max-w-6xl mx-auto relative" style={{ paddingBottom: '200px' }}>
         {projects.map((project, idx) => (
           <ProjectCard key={idx} project={project} index={idx} total={projects.length} />
         ))}
@@ -197,7 +197,7 @@ const ProjectCard = ({ project, index, total }) => {
       style={{
         scale,
         position: 'sticky',
-        top: `${60 + index * 30}px`,
+        top: `${index === 2 ? 107 : 60 + index * 30}px`,
         zIndex: index + 1,
         marginBottom: index < total - 1 ? '-80px' : '0px'
       }}
