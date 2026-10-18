@@ -197,7 +197,7 @@ const ProjectCard = ({ project, index, total }) => {
       style={{
         scale,
         position: 'sticky',
-        top: `${index === 2 ? 107 : 60 + index * 30}px`,
+        top: `${60 + index * 80}px`,
         zIndex: index + 1,
         marginBottom: index < total - 1 ? '-80px' : '0px'
       }}
