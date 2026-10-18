@@ -67,8 +67,8 @@ const FadeIn = ({ children, delay = 0, duration = 0.7, x = 0, y = 30 }) => (
 
 const HeroSection = () => {
   return (
-    <section 
-      className="h-screen bg-[#0C0C0C] flex flex-col overflow-x-clip font-['Kanit'] relative"
+    <section id="about"
+      className="h-screen bg-[#0C0C0C] flex flex-col overflow-x-clip font-['Kanit'] relative scroll-mt-24"
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',
@@ -168,14 +168,14 @@ const FeaturedProjectsSection = () => {
   ];
 
   return (
-    <section className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-5 sm:px-8 md:px-10 py-20 font-['Kanit'] relative z-5">
+    <section id="projects" className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-5 sm:px-8 md:px-10 py-20 font-['Kanit'] relative z-5 scroll-mt-24">
       <FadeIn delay={0} y={40}>
         <h2 className="bg-gradient-to-b from-[#646973] to-[#BBCCD7] bg-clip-text text-transparent font-black uppercase text-center mb-20" style={{ fontSize: 'clamp(2.5rem, 10vw, 120px)' }}>
           Featured Projects
         </h2>
       </FadeIn>
 
-      <div className="max-w-6xl mx-auto relative" style={{ paddingBottom: '200px' }}>
+      <div className="max-w-6xl mx-auto relative" style={{ paddingBottom: 'calc(100vh + 200px)' }}>
         {projects.map((project, idx) => (
           <ProjectCard key={idx} project={project} index={idx} total={projects.length} />
         ))}
@@ -281,7 +281,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 font-['Kanit']">
+    <section id="contact" className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 font-['Kanit'] scroll-mt-24">
       <FadeIn delay={0} y={40}>
         <h2 className="text-[#0C0C0C] font-black uppercase text-center mb-16 sm:mb-20 md:mb-28" style={{ fontSize: 'clamp(2.5rem, 10vw, 120px)' }}>
           Skills & Expertise
@@ -339,7 +339,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 font-['Kanit']">
+    <section id="work" className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 font-['Kanit'] scroll-mt-24">
       <FadeIn delay={0} y={40}>
         <h2 className="bg-gradient-to-b from-[#646973] to-[#BBCCD7] bg-clip-text text-transparent font-black uppercase text-center mb-16" style={{ fontSize: 'clamp(2.5rem, 10vw, 120px)' }}>
           Work Experience
@@ -394,7 +394,7 @@ const ContactSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-8 flex-wrap">
             <ContactButton label="Email Me" onClick={() => window.location.href = 'mailto:sankil.sudrik@gmail.com'} />
             <a
-              href="#"
+              href="/Sankil%20resume.pdf" download="Sankil resume.pdf"
               className="px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 rounded-full border-2 border-[#0C0C0C] text-[#0C0C0C] font-medium uppercase tracking-widest text-xs sm:text-sm md:text-base hover:bg-[#0C0C0C]/10 transition-colors flex items-center gap-2"
             >
               <Download size={18} />
@@ -437,6 +437,7 @@ export default function App() {
           margin: 0;
           padding: 0;
         }
+        html { scroll-behavior: smooth; }
         html, body, #root {
           background-color: #0C0C0C;
           margin: 0;
