@@ -107,9 +107,7 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col justify-between relative z-20">
         <div className="mt-6 sm:mt-4 md:-mt-5 overflow-hidden px-6 md:px-10">
           <FadeIn delay={0.15} y={40}>
-            <GradientHeading className="font-black uppercase tracking-tight leading-none whitespace-normal" style={{ fontSize: 'clamp(12vw, 14vw, 16vw)', maxWidth: '100%' }}>
-              AI/ML Engineer
-            </GradientHeading>
+            
           </FadeIn>
           <FadeIn delay={0.2} y={40}>
             <p className="text-[#D7E2EA] font-light mt-4" style={{ fontSize: 'clamp(0.9rem, 2vw, 1.3rem)' }}>
@@ -120,7 +118,7 @@ const HeroSection = () => {
  
         <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 gap-4 flex-wrap">
           <FadeIn delay={0.35} y={20}>
-            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug" style={{ fontSize: 'clamp(0.7rem, 1.3vw, 1.2rem)', maxWidth: 'clamp(140px, 25vw, 240px)' }}>
+            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug rounded-2xl border border-white/20 bg-white/10 px-5 py-4 shadow-xl backdrop-blur-xl" style={{ fontSize: 'clamp(0.7rem, 1.3vw, 1.2rem)', maxWidth: 'clamp(240px, 32vw, 420px)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', boxShadow: '0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.12)' }}>
               AI/ML specialist building smart applications. Love solving complex problems with data and code.
             </p>
           </FadeIn>
